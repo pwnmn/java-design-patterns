@@ -1,3 +1,6 @@
+import com.github.pwnmn.design_patterns.behavioral.chain_of_responsibility.Chain;
+import com.github.pwnmn.design_patterns.behavioral.chain_of_responsibility.Processor;
+import com.github.pwnmn.design_patterns.behavioral.chain_of_responsibility.Number;
 import com.github.pwnmn.design_patterns.creational.builder.BankAccount;
 import com.github.pwnmn.design_patterns.creational.factory_abstract.animal.Animal;
 import com.github.pwnmn.design_patterns.creational.factory_abstract.factory.AbstractFactory;
@@ -33,5 +36,9 @@ public class Main {
 
         ChristmasTree tree = new Garland(new Lights(new ChristmasTreeImpl()));
         System.out.println(tree.decorate());
+
+        Processor chain = new Chain();
+
+        chain.process(0);
     }
 }
